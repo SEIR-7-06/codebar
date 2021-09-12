@@ -3,14 +3,26 @@
 ## Part I: Members, Students and Instructors
 
 You're starting your own web development school called Codebar! Everybody at Codebar -- whether they are attending workshops or teaching them -- is a `Member`.
-* Each member has a `full_name`.
+* Each member has a `first_name`.
 * Each member should be able to `introduce` themselves (e.g., "Hi, my name is Kevin!").
 
 Each `Member` is also either a `Student` or an `Instructor`.
 * Each student has a `reason` for attending Codebar (e.g., "I've always wanted to make websites!").
 * Each instructor a `bio` (e.g., "I've been coding in Python for 5 years and want to share the love!").
-* Each instructor also has a set of `skills` (e.g., `["Python", "Javascript", "C++"]`).
-* An instructor can gain a new skill using `add_skill`.
+* Each student also has a set of `skills` (e.g., `["Python", "Javascript", "C++"]`).
+* A student can gain a new skill calling the `add_skill()` method.
+
+## Test your Code
+
+```py
+jane = Student("Jane", "I tried coding and I think I would enjoy being a dev")
+lena = Student("Lena", "I am really excited about learning to program!")
+jane.add_skill("Python")
+lena.add_skill("HTML")
+lena.add_skill("JavaScript")
+vicky = Instructor("Vicky", "I love teaching")
+nicole = Instructor("Nicole McMillan", "I have been programming for 5 years in Python and want to spread the love")
+```
 
 ## Part II: Workshops
 
@@ -30,33 +42,11 @@ Make your code work for the following calls and print out the response you can s
 
 ```py
 workshop = Workshop("12/03/2014", "Shutl")
-
-jane = Student("Jane Doe", "I am trying to learn programming and need some help")
-lena = Student("Lena Smith", "I am really excited about learning to program!")
-vicky = Instructor("Vicky Python", "I want to help people learn coding.")
-vicky.add_skill("HTML")
-vicky.add_skill("JavaScript")
-nicole = Instructor("Nicole McMillan", "I have been programming for 5 years in Python and want to spread the love")
-nicole.add_skill("Python")
-
 workshop.add_participant(jane)
 workshop.add_participant(lena)
 workshop.add_participant(vicky)
 workshop.add_participant(nicole)
 workshop.print_details()
-# =>
-# Workshop - 12/03/2014 - Shutl
-#
-# Students
-# 1. Jane Doe - I am trying to learn programming and need some help
-# 2. Lena Smith - I am really excited about learning to program!
-#
-# Instructors
-# 1. Vicky Ruby - HTML, JavaScript
-#    I want to help people learn coding.
-# 2. Nicole McMillan - Ruby
-#    I have been programming for 5 years in Ruby and want to spread the love
-#
 ```
 
 ## Bonus I
@@ -64,6 +54,3 @@ workshop.print_details()
 The `print_details` method currently does a number of different things, like printing out workshop details, the list of Students and the list of Instructors.
 
 Create separate methods to print the workshop details (date and subject), a method to print out the students and one to print out the instructors. Call these from `print_details` instead of having all the code there.
-
-
-> Hint: look into defining private class methods.
