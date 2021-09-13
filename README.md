@@ -9,7 +9,7 @@ You're starting your own web development school called Codebar! Everybody at Cod
 Each `Member` is also either a `Student` or an `Instructor`.
 * Each student has a `reason` for attending Codebar (e.g., "I've always wanted to make websites!").
 * Each instructor a `bio` (e.g., "I've been coding in Python for 5 years and want to share the love!").
-* Each student also has a set of `skills` (e.g., `["Python", "Javascript", "C++"]`).
+* Each student also has a set of `skills` (e.g., `["Python", "Javascript", "C++"]`) that initially starts out empty.
 * A student can gain a new skill calling the `add_skill()` method.
 
 ## Test your Code
@@ -17,11 +17,15 @@ Each `Member` is also either a `Student` or an `Instructor`.
 ```py
 jane = Student("Jane", "I tried coding and I think I would enjoy being a dev")
 lena = Student("Lena", "I am really excited about learning to program!")
+jane.introduce()
+lena.introduce()
 jane.add_skill("Python")
 lena.add_skill("HTML")
 lena.add_skill("JavaScript")
 vicky = Instructor("Vicky", "I love teaching")
-nicole = Instructor("Nicole McMillan", "I have been programming for 5 years in Python and want to spread the love")
+fred = Instructor("Fred McMillan", "I have been programming for 5 years in Python and want to spread the love")
+vicky.introduce()
+fred.introduce()
 ```
 
 ## Part II: Workshops
